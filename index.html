@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mall_customer</title>
+    
+    <style>
+       body {
+           background-repeat: no-repeat;
+
+           background-attachment: fixed;
+           background-size: cover;
+           background-image:url("{{url_for('static',filename='shopping-mall.jpg')}}");
+}
+*{box-sizing: border-box;}
+
+
+/* Add styles to the form container*/
+.container{
+    position: absolute;
+    left: 650px;
+    right: 500px;
+    margin: 20px;
+    height: max-content;
+    margin-top: 200px;
+    max-width: 450px;
+    background-color:bisque;
+    padding: 20px;
+}
+ /*full-width input fields*/
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #f1f1f1;
+}
+.btn{
+    background-color: #f1f1f1;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+
+.btn:hover{
+    opacity: 1;
+}
+
+ </style>
+</head>
+<body>
+   
+    
+        <h1 style="color:rgb(23, 2, 3);text-align: center;"><b>Customer Segmentation</b></h1>
+    
+    
+        <form action="/result" method="post" class="container" >
+            <h1>Customer Segmentation</h1>
+                <label for="Annual Income">Annual Income (k$):</label>
+                <input type="text" id="Annual Income" name="Annual Income"><br><br>
+                <label for="Spending Score (1-100)">Spending Score (1-100):</label>
+                <input type="text" id="Spending Score (1-100)" name="Spending Score (1-100)"><br><br>
+                <input type="submit" value="Submit">
+               
+            
+         </form>
+   
+</body>
+</html>
